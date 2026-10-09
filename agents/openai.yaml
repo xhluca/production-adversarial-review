@@ -1,0 +1,4 @@
+interface:
+  display_name: "Production Adversarial Review"
+  short_description: "Adversarial PR validation for costly production failures"
+  default_prompt: "Use $production-adversarial-review to review this PR against current main, reproduce adversarial failures, and give an evidence-backed merge recommendation."
