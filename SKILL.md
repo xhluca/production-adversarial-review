@@ -2,7 +2,7 @@
 name: production-adversarial-review
 description: "Review production pull requests with adversarial lifecycle tests, differential validation against a pinned baseline, and evidence-backed merge gates. Use for explicit thorough or regression-sensitive PR reviews where crashes or corruption have severe operational cost."
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Production Adversarial Review
@@ -82,7 +82,13 @@ One root cause may produce many failing checks. Report the root cause once, with
 
 Use the decision and reporting contract in [EVIDENCE.md](EVIDENCE.md). Recommend **hold / changes required** for a reproducible material defect, a broken newly accepted workflow, or an unresolved material validation gap. Recommend **ready for the tested scope** only when required checks passed, intended changes are verified end to end, findings are resolved, and the tested integration tree is still current. Never say “absolutely regression-free.” State residual limits precisely without generic disclaimers.
 
-If the author updates the PR, read the entire new diff and repeat affected reproductions, integration checks, and relevant broad regression suites. Do not infer that fixing the reported example fixed related paths. If asked to reply, post the concrete reproduction, causal explanation, requested correction/tests, and verified results; sign with the actual known model identity when requested, never an invented version. If asked to merge/release, verify the exact target and relevant built/released artifacts; review approval is not deployment authorization.
+If the author updates the PR, read the entire new diff and repeat affected reproductions, integration checks, and relevant broad regression suites. Do not infer that fixing the reported example fixed related paths. If asked to reply, post the concrete reproduction, causal explanation, requested correction/tests, and verified results, following the GitHub attribution rule below. If asked to merge/release, verify the exact target and relevant built/released artifacts; review approval is not deployment authorization.
+
+## GitHub attribution
+
+Always sign GitHub comments, reviews, and PR descriptions authored by this agent with its full name/role and the exact verified model/version. For Codex, use `— Codex (OpenAI coding agent, <verified-model-id>)`; other agents must use their own genuine identity. Resolve the identifier from the active session's authoritative metadata; for retrospective attribution, verify the model used when the work was performed. Never infer it from the installed CLI version, a default configuration, a model catalog, or a prior turn. If it cannot be verified, ask for a verifiable identifier before publishing rather than inventing a version.
+
+This signature requirement applies to GitHub publications, not ordinary chat replies. Leave other people's contributions and separately identified automation-bot comments unchanged.
 
 ## Deliverables
 

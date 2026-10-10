@@ -33,6 +33,8 @@ For a fixed version, check out the corresponding release tag after cloning. Insp
 
 The skill covers state creation followed by downstream use, save/reload, source mutation and stale indexes, repeated caller-owned inputs, optimized and fallback paths, and native diagnostics. Checks are selected from the actual diff and supported workflows rather than an arbitrary test quota.
 
+Agent-authored GitHub reviews, comments, and PR descriptions require the agent's full name/role and verified model/version. This attribution rule does not add signatures to ordinary chat replies.
+
 ## Run the helper tests
 
 Requires Python 3.10 or later; no third-party dependencies:
